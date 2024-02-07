@@ -10,4 +10,6 @@ contract Library {
         string author;
         uint book_id;
     }
+
+    Book[] public books;
 }
