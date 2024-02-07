@@ -5,5 +5,9 @@ pragma solidity ^0.8.9;
 import "hardhat/console.sol";
 
 contract Library {
-    
+    struct Book {
+        string title;
+        string author;
+        uint book_id;
+    }
 }
