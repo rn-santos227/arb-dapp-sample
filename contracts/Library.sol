@@ -16,4 +16,10 @@ contract Library {
     function addBook(string memory _title, string memory _author, uint _book_id) public {
         books.push(Book(_title, _author, _book_id));
     }
+
+    function getBook(uint index) public view returns (string memory, string memory, uint) {
+        require(index < books.length, "Index out of bounds");
+        Book memory book = books[index];
+        return (book.title, book.author, book.book_id);
+    }
 }
