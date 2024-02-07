@@ -12,4 +12,8 @@ contract Library {
     }
 
     Book[] public books;
+
+    function addBook(string memory _title, string memory _author, uint _book_id) public {
+        books.push(Book(_title, _author, _book_id));
+    }
 }
